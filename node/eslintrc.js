@@ -18,6 +18,7 @@ module.exports = {
     curly: ['error', 'multi-line'],
     'eol-last': 2,
     eqeqeq: [2, 'smart'],
+    'keyword-spacing': [2, {before: true, after: true}],
     'max-depth': [1, 3],
     'max-len': [
       'warn',
@@ -44,7 +45,14 @@ module.exports = {
     'object-curly-spacing': [2, 'never'],
     quotes: [2, 'single', 'avoid-escape'],
     semi: [2, 'always'],
-    'keyword-spacing': [2, {before: true, after: true}],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
     'space-unary-ops': 2
   },
 

@@ -1,11 +1,20 @@
+const fp = require('path');
+const nodeEslintrcPath = fp.join(
+  fp.resolve(__dirname, '..'),
+  'node/eslintrc.js'
+);
 module.exports = {
+  extends: ['eslint:recommended', 'plugin:react/recommended', nodeEslintrcPath],
+
   env: {
     browser: true,
     node: true,
     es6: true,
     jest: true
   },
+
   parser: 'babel-eslint',
+
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
@@ -15,16 +24,17 @@ module.exports = {
       legacyDecorators: true
     }
   },
+
   plugins: [
     //"objects",
     'react'
   ],
+
   globals: {
     __CLIENT__: true,
     __SERVER__: true,
     __DEV__: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
 
   rules: {
     // Objects plugin
@@ -318,7 +328,6 @@ module.exports = {
     ], // sort variables within the same declaration block (off by default)
     'keyword-spacing': [2], // require a space before certain keywords
     'space-before-blocks': [2, 'always'], // require or disallow space before blocks (off by default)
-    'space-before-function-paren': [2, 'never'], // require or disallow space before function opening parenthesis (off by default)
     'space-in-parens': [2, 'never'], // require or disallow spaces inside parentheses (off by default)
     'space-infix-ops': 0, // TODO currently broken for default params                                   // require spaces around operators
     'space-unary-ops': [
@@ -362,6 +371,7 @@ module.exports = {
       // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
       flowVersion: '0.53' // Flow version
     },
+
     propWrapperFunctions: [
       // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
       'forbidExtraProps',
