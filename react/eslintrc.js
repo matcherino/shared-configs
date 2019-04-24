@@ -1,10 +1,7 @@
 const fp = require('path');
-const nodeEslintrcPath = fp.join(
-  fp.resolve(__dirname, '..'),
-  'node/eslintrc.js'
-);
+const nodeEslintrcPath = fp.join(fp.resolve(__dirname, '..'), '.eslintrc.js'); // extension is required
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:react/recommended', nodeEslintrcPath],
+  extends: ['plugin:react/recommended', nodeEslintrcPath],
 
   env: {
     browser: true,
@@ -16,7 +13,7 @@ module.exports = {
   parser: 'babel-eslint',
 
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -379,7 +376,7 @@ module.exports = {
       createClass: 'createReactClass', // Regex for Component Factory to use,
       // default to "createReactClass"
       pragma: 'React', // Pragma to use, default to "React"
-      version: '16', // React version. "detect" automatically picks the version you have installed.
+      version: 'detect', // React version. "detect" automatically picks the version you have installed.
       // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
       flowVersion: '0.53', // Flow version
     },
