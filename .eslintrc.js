@@ -9,6 +9,8 @@ module.exports = {
     ecmaVersion: 2018,
   },
 
+  plugins: ['json'],
+
   rules: {
     'array-bracket-spacing': [2, 'never'],
     'block-scoped-var': 2,
