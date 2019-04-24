@@ -1,12 +1,12 @@
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
 
   parser: 'babel-eslint',
 
   parserOptions: {
-    ecmaVersion: 2017
+    ecmaVersion: 2017,
   },
 
   rules: {
@@ -21,13 +21,16 @@ module.exports = {
     'keyword-spacing': [2, {before: true, after: true}],
     'max-depth': [1, 3],
     'max-len': [
-      'warn',
+      2,
       {
         code: 80,
-        ignoreComments: true,
+        tabWidth: 2,
+        ignoreComments: false,
+        ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+        ignoreUrls: true,
+      },
     ],
     'max-statements': [1, 80],
     'new-cap': 1,
@@ -38,23 +41,27 @@ module.exports = {
       'error',
       {
         argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_'
-      }
+        varsIgnorePattern: '^_',
+      },
     ],
     'no-use-before-define': [2, 'nofunc'],
     'object-curly-spacing': [2, 'never'],
     quotes: [2, 'single', 'avoid-escape'],
     semi: [2, 'always'],
     'space-before-function-paren': [
-      'error',
+      2,
       {
         anonymous: 'never',
         named: 'never',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
-    'space-unary-ops': 2
+    'space-unary-ops': 2,
   },
 
-  extends: ['eslint:recommended']
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+  ],
 };

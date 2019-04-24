@@ -10,7 +10,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
-    jest: true
+    jest: true,
   },
 
   parser: 'babel-eslint',
@@ -21,19 +21,19 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
       modules: true,
-      legacyDecorators: true
-    }
+      legacyDecorators: true,
+    },
   },
 
   plugins: [
     //"objects",
-    'react'
+    'react',
   ],
 
   globals: {
     __CLIENT__: true,
     __SERVER__: true,
-    __DEV__: true
+    __DEV__: true,
   },
 
   rules: {
@@ -49,8 +49,8 @@ module.exports = {
     'react/jsx-closing-bracket-location': [
       2,
       {
-        location: 'tag-aligned'
-      }
+        location: 'tag-aligned',
+      },
     ], // Validate closing bracket location in JSX
     'react/jsx-curly-spacing': [2, 'never'], // Enforce or disallow spaces inside of curly braces in JSX attributes
     'react/jsx-indent-props': [0, 2], // TODO broken with ternaries                      // Validate props indentation in JSX
@@ -67,20 +67,20 @@ module.exports = {
       2,
       {
         ignoreCase: true,
-        callbacksLast: true
-      }
+        callbacksLast: true,
+      },
     ], // Enforce propTypes declarations alphabetical sorting
     'react/jsx-sort-props': [
       0,
       {
         ignoreCase: true,
-        callbacksLast: true
-      }
+        callbacksLast: true,
+      },
     ], // Enforce props alphabetical sorting
     'react/jsx-uses-react': 2, // Prevent React to be incorrectly marked as unused
     'react/jsx-uses-vars': 2, // Prevent variables used in JSX to be incorrectly marked as unused
 
-    'react/jsx-no-bind': 2,
+    'react/jsx-no-bind': 0,
 
     //"react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
     'react/no-danger': 1, // Prevent usage of dangerous JSX properties
@@ -105,9 +105,9 @@ module.exports = {
           '/^render.+$/',
           'render',
           '/^do.+$/',
-          'everything-else'
-        ]
-      }
+          'everything-else',
+        ],
+      },
     ],
     // Possible Errors
     // "comma-dangle": [
@@ -146,8 +146,8 @@ module.exports = {
       2,
       {
         setWithoutGet: true,
-        getWithoutSet: false
-      }
+        getWithoutSet: false,
+      },
     ], // Enforces getter/setter pairs in objects (off by default)
     'block-scoped-var': 0, // treat var statements as if they were block scoped (off by default)
     complexity: 0, // specify the maximum cyclomatic complexity allowed in a program (off by default)
@@ -218,7 +218,7 @@ module.exports = {
     // disallow declaration of variables that are not used in the code
     'no-unused-vars': [
       'error',
-      {argsIgnorePattern: '^_', varsIgnorePattern: '^_'}
+      {argsIgnorePattern: '^_', varsIgnorePattern: '^_'},
     ],
 
     'no-use-before-define': [2, 'nofunc'], // disallow use of variables before they are defined
@@ -228,21 +228,21 @@ module.exports = {
       2,
       '1tbs',
       {
-        allowSingleLine: false
-      }
+        allowSingleLine: false,
+      },
     ], // enforce one true brace style (off by default)
     camelcase: [
       2,
       {
-        properties: 'always'
-      }
+        properties: 'always',
+      },
     ], // require camel case names
     'comma-spacing': [
       2,
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ], // enforce spacing before and after comma
     'comma-style': [2, 'last'], // enforce one true comma style (off by default)
     'computed-property-spacing': [2, 'never'], // require or disallow padding inside computed properties (off by default)
@@ -257,16 +257,16 @@ module.exports = {
       2,
       {
         SwitchCase: 0,
-        VariableDeclarator: 1
-      }
+        VariableDeclarator: 1,
+      },
     ], // TODO currently broken for ternaries // this option sets a specific tab width for your code (off by default)
     'jsx-quotes': [2, 'prefer-double'], // specify whether double or single quotes should be used in JSX attributes
     'key-spacing': [
       2,
       {
         beforeColon: false,
-        afterColon: true
-      }
+        afterColon: true,
+      },
     ], // enforces spacing between keys and values in object literal properties
     'lines-around-comment': 0, // enforces empty lines around comments (off by default)
     'linebreak-style': 2, // disallow mixed 'LF' and 'CRLF' as linebreaks (off by default)
@@ -282,8 +282,8 @@ module.exports = {
     'no-multiple-empty-lines': [
       2,
       {
-        max: 2
-      }
+        max: 2,
+      },
     ], // disallow multiple empty lines (off by default)
     'no-negated-condition': 2, // disallow negated conditions
     'no-nested-ternary': 0, // disallow nested ternary expressions (off by default)
@@ -300,8 +300,8 @@ module.exports = {
       {
         // allow or disallow one variable declaration per function (off by default)
         uninitialized: 'always', // Exactly one declaration for uninitialized variables per function (var) or block (let or const)
-        initialized: 'never' // Exactly one declarator per initialized variable declaration per function (var) or block (let or const)
-      }
+        initialized: 'never', // Exactly one declarator per initialized variable declaration per function (var) or block (let or const)
+      },
     ],
     'operator-assignment': [2, 'always'], // require assignment operator shorthand where possible or prohibit it entirely (off by default)
     // "operator-linebreak": [
@@ -316,15 +316,15 @@ module.exports = {
       2,
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ], // enforce spacing before and after semicolons
     semi: [2, 'always'], // require or disallow use of semicolons instead of ASI
     'sort-vars': [
       0,
       {
-        ignoreCase: true
-      }
+        ignoreCase: true,
+      },
     ], // sort variables within the same declaration block (off by default)
     'keyword-spacing': [2], // require a space before certain keywords
     'space-before-blocks': [2, 'always'], // require or disallow space before blocks (off by default)
@@ -334,8 +334,8 @@ module.exports = {
       2,
       {
         words: true,
-        nonwords: false
-      }
+        nonwords: false,
+      },
     ], // Require or disallow spaces before/after unary operators (words on by default, nonwords off by default)
     'spaced-comment': 0, // require or disallow a space immediately following the // or /* in a comment (off by default)
     'wrap-regex': 0, // require regex literals to be wrapped in parentheses (off by default)
@@ -355,11 +355,23 @@ module.exports = {
     'require-yield': 2, // disallow generator functions that do not have yield
     // Legacy
     'max-depth': 0, // specify the maximum depth that blocks can be nested (off by default)
-    'max-len': ['error', {code: 120, tabWidth: 2, ignoreComments: false}], // TODO ignore comments? // specify the maximum length of a line in your program (off by default)
+
+    'max-len': [
+      2,
+      {
+        code: 120,
+        tabWidth: 2,
+        ignoreComments: false,
+        ignoreRegExpLiterals: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreUrls: true,
+      },
+    ],
     'max-params': [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     'max-statements': 0, // specify the maximum number of statement allowed in a function (off by default)
     'no-bitwise': 2, // disallow use of bitwise operators (off by default)
-    'no-plusplus': 0 // disallow use of unary operators, ++ and -- (off by default)
+    'no-plusplus': 0, // disallow use of unary operators, ++ and -- (off by default)
   },
 
   settings: {
@@ -369,14 +381,14 @@ module.exports = {
       pragma: 'React', // Pragma to use, default to "React"
       version: '16', // React version. "detect" automatically picks the version you have installed.
       // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
-      flowVersion: '0.53' // Flow version
+      flowVersion: '0.53', // Flow version
     },
 
     propWrapperFunctions: [
       // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
       'forbidExtraProps',
       {property: 'freeze', object: 'Object'},
-      {property: 'myFavoriteWrapper'}
-    ]
-  }
+      {property: 'myFavoriteWrapper'},
+    ],
+  },
 };

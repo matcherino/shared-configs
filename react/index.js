@@ -1,7 +1,7 @@
 const eslintrc = require('./eslintrc');
-const prettierrc = require('../node/prettierrc');
+const prettierrc = require('../.prettierrc');
 
 module.exports = {
   eslintrc,
-  prettierrc
+  prettierrc,
 };

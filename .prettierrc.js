@@ -2,10 +2,10 @@ module.exports = {
   arrowParens: 'avoid',
   bracketSpacing: false,
   jsxBracketSameLine: false,
-  parser: 'babylon',
+  parser: 'babel',
   semi: true,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',
-  useTabs: false
+  useTabs: false,
 };
